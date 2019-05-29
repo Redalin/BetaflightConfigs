@@ -1,0 +1,109 @@
+diff
+
+# version
+# Betaflight / CLRACINGF4 (CLR4) 3.5.1 Sep  8 2018 / 05:03:13 (d9fb5ca13) MSP API: 1.40
+
+board_name CLRACINGF4
+manufacturer_id 
+
+# name
+name Redalin
+
+# resources
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature GPS
+feature TELEMETRY
+feature LED_STRIP
+feature AIRMODE
+
+# beeper
+beeper -ON_USB
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSED
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+serial 3 8192 115200 57600 0 115200
+serial 5 2 115200 57600 0 115200
+
+# led
+led 0 6,7::CI:2
+led 1 7,7::CI:2
+led 2 8,7::CI:2
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1300 1700 0 0
+aux 2 13 1 1700 2100 0 0
+aux 3 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# master
+set serialrx_provider = SBUS
+set blackbox_device = SPIFLASH
+set min_throttle = 1015
+set dshot_idle_value = 160
+set motor_pwm_protocol = DSHOT600
+set vbat_scale = 112
+set small_angle = 120
+set gps_provider = UBLOX
+set gps_auto_baud = ON
+set pid_process_denom = 1
+set tlm_halfduplex = OFF
+set osd_vbat_pos = 2486
+set osd_tim_2_pos = 2518
+set osd_current_pos = 2497
+set osd_mah_drawn_pos = 2465
+set osd_craft_name_pos = 2081
+set osd_gps_speed_pos = 2511
+set osd_gps_sats_pos = 2505
+set osd_warnings_pos = 2441
+set vtx_channel = 2
+set vtx_freq = 5760
+
+# profile
+profile 0
+
+set dterm_notch_cutoff = 0
+set feedforward_transition = 14
+set iterm_relax = RP
+set f_pitch = 80
+set f_roll = 80
+
+# rateprofile
+rateprofile 0
+
+set roll_srate = 80
+set pitch_srate = 80
+
+# version
+# Betaflight / CLRACINGF4 (CLR4) 3.5.1 Sep  8 2018 / 05:03:13 (d9fb5ca13) MSP API: 1.40
+
+# 
