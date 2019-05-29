@@ -89,6 +89,7 @@ profile 0
 
 set launch_control_mode = PITCHONLY
 set launch_angle_limit = 60
+set launch_trigger_throttle_percent = 40
 
 # rateprofile
 rateprofile 0
