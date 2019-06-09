@@ -41,17 +41,14 @@ serial 2 64 115200 57600 0 115200
 serial 3 8192 115200 57600 0 115200
 
 # led
-led 0 5,10::C:2
-led 1 6,10::C:2
-led 2 7,10::C:2
+led 0 5,10::AT:9
+led 1 6,10::AT:9
+led 2 7,10::AT:9
 
 # color
 
 # mode_color
 mode_color 7 0 7
-
-# adjrange
-adjrange 0 0 3 900 2100 12 3 0 0
 
 # master
 set serialrx_provider = FPORT
