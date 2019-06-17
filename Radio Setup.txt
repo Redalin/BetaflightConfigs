@@ -1,0 +1,8 @@
+AETR1234
+
+AUX1 Arm. Launch Mode (with SH on SF - Left shoulder switch)
+AUX2. Quad select/failsafe/launch mode/GPS Rescue = SA
+AUX3. Buzzer, turtle. = SB
+AUX4. LED Colour. = S2
+
+
