@@ -1,0 +1,148 @@
+# resource
+resource BEEPER 1 B04
+resource MOTOR 1 B00
+resource MOTOR 2 B01
+resource MOTOR 3 A03
+resource MOTOR 4 A02
+resource MOTOR 5 B08
+resource LED_STRIP 1 B08
+resource SERIAL_TX 1 A09
+resource SERIAL_TX 3 B10
+resource SERIAL_TX 4 A00
+resource SERIAL_TX 6 A10
+resource SERIAL_RX 3 B11
+resource SERIAL_RX 4 A01
+resource SERIAL_RX 6 C07
+resource INVERTER 1 C00
+resource LED 1 B05
+resource SPI_SCK 1 A05
+resource SPI_SCK 2 B13
+resource SPI_SCK 3 C10
+resource SPI_MISO 1 A06
+resource SPI_MISO 2 B14
+resource SPI_MISO 3 C11
+resource SPI_MOSI 1 A07
+resource SPI_MOSI 2 B15
+resource SPI_MOSI 3 C12
+resource ESCSERIAL 1 B09
+resource CAMERA_CONTROL 1 B09
+resource ADC_BATT 1 C02
+resource ADC_RSSI 1 C03
+resource ADC_CURR 1 C01
+resource SDCARD_CS 1 B12
+resource SDCARD_DETECT 1 B07
+resource FLASH_CS 1 B03
+resource OSD_CS 1 A15
+resource GYRO_EXTI 1 C04
+resource GYRO_CS 1 A04
+resource USB_DETECT 1 C05
+
+# diff
+
+# version
+# Betaflight / CLRACINGF4 (CLR4) 4.0.3 Jun  1 2019 / 11:15:21 (094cfc956) MSP API: 1.41
+
+# start the command batch
+batch start
+
+board_name CLRACINGF4
+manufacturer_id 
+
+# name
+name Redalin
+
+# resources
+resource SERIAL_TX 6 A10
+resource SERIAL_RX 1 NONE
+
+# timer
+
+# dma
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature GPS
+feature TELEMETRY
+feature LED_STRIP
+
+# beeper
+beeper -ON_USB
+beeper -CAM_CONNECTION_OPEN
+
+# beacon
+
+# map
+
+# serial
+serial 2 64 115200 57600 0 115200
+serial 3 8192 115200 57600 0 115200
+serial 5 2 115200 57600 0 115200
+
+# led
+led 0 6,7::CI:2
+led 1 7,7::CI:2
+led 2 8,7::CI:2
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1300 1700 0 0
+aux 2 13 1 1700 2100 0 0
+aux 3 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# display_name
+
+# master
+set acc_calibration = 42,10,-29
+set serialrx_provider = FPORT
+set blackbox_device = NONE
+set min_throttle = 1015
+set dshot_idle_value = 160
+set motor_pwm_protocol = DSHOT600
+set vbat_scale = 112
+set small_angle = 120
+set gps_provider = UBLOX
+set gps_auto_baud = ON
+set pid_process_denom = 1
+set tlm_halfduplex = OFF
+set osd_vbat_pos = 2421
+set osd_tim_2_pos = 2453
+set osd_current_pos = 2432
+set osd_mah_drawn_pos = 2402
+set osd_craft_name_pos = 2081
+set osd_gps_speed_pos = 2447
+set osd_gps_sats_pos = 2441
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_freq = 5695
+
+# profile
+profile 0
+
+
+# rateprofile
+rateprofile 0
+
+
+# end the command batch
+batch end
+
+# 
