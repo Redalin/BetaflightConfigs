@@ -60,30 +60,36 @@ set yaw_motors_reversed = ON
 set small_angle = 180
 set pid_process_denom = 1
 set tlm_halfduplex = OFF
-set osd_warn_batt_warning = OFF
-set osd_warn_esc_fail = OFF
-set osd_warn_core_temp = OFF
-set osd_warn_no_gps_rescue = OFF
-set osd_warn_gps_rescue_disabled = OFF
-set osd_cap_alarm = 1000
-set osd_vbat_pos = 2422
-set osd_rssi_pos = 2106
-set osd_tim_2_pos = 2454
-set osd_vtx_channel_pos = 2082
-set osd_current_pos = 2434
-set osd_mah_drawn_pos = 2401
-set osd_craft_name_pos = 2114
-set osd_warnings_pos = 2377
-set osd_stat_max_spd = OFF
-set osd_stat_battery = ON
-set osd_stat_bbox = OFF
-set osd_stat_bb_no = OFF
+
+# Video
 set vcd_video_system = NTSC
 set vtx_band = 5
 set vtx_channel = 2
 set vtx_power = 1
 set vtx_freq = 5658
 set pinio_box = 40,41,42,43
+
+
+# OSD Stuff
+set osd_warn_batt_warning = OFF
+set osd_warn_visual_beeper = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_cap_alarm = 1000
+set osd_vbat_pos = 2454
+set osd_rssi_pos = 2105
+set osd_tim_2_pos = 2433
+set osd_vtx_channel_pos = 4130
+set osd_current_pos = 4480
+set osd_mah_drawn_pos = 4449
+set osd_craft_name_pos = 2082
+set osd_warnings_pos = 2378
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
 
 # profile
 profile 0
