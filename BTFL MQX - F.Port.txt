@@ -33,6 +33,9 @@ resource PINIO 1 A01
 feature TELEMETRY
 feature LED_STRIP
 
+# turn it off cause of all the false alarms 
+runaway_takeoff_prevention = ON
+
 # beeper
 beeper -ON_USB
 
