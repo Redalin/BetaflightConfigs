@@ -34,7 +34,7 @@ feature TELEMETRY
 feature LED_STRIP
 
 # turn it off cause of all the false alarms 
-runaway_takeoff_prevention = ON
+set runaway_takeoff_prevention = OFF
 
 # beeper
 beeper -ON_USB
