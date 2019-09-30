@@ -37,7 +37,12 @@ feature LED_STRIP
 set runaway_takeoff_prevention = OFF
 
 # beeper
+beeper -RX_LOST
+beeper -RX_LOST_LANDING
+beeper -BAT_LOW
+beeper -DISARM_REPEAT
 beeper -ON_USB
+beeper -CRASH_FLIP
 
 # serial
 serial 2 64 115200 57600 0 115200
