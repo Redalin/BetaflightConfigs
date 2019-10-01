@@ -1,0 +1,174 @@
+# diff all
+
+# version
+# Betaflight / CLRACINGF4 (CLR4) 4.0.2 May  5 2019 / 11:40:40 (56bdc8d26) MSP API: 1.41
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CLRACINGF4
+manufacturer_id 
+mcu_id 003d0037354b500520353146
+signature 
+
+# name
+name REDALIN_1
+
+# resources
+resource SERIAL_RX 4 NONE
+resource PINIO 1 A01
+
+# timer
+
+# dma
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature TELEMETRY
+feature LED_STRIP
+
+# beeper
+beeper -ON_USB
+
+# beacon
+
+# map
+
+# serial
+serial 2 64 115200 57600 0 115200
+serial 3 8192 115200 57600 0 115200
+
+# led
+led 0 5,10::C:2
+led 1 6,10::C:2
+led 2 7,10::C:2
+
+# color
+
+# mode_color
+mode_color 7 0 7
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 27 1 1125 2100 0 0
+aux 2 13 2 1275 1675 0 0
+aux 3 35 2 1700 2100 0 0
+aux 4 40 1 900 1100 0 0
+aux 5 49 0 1775 1925 0 0
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# display_name
+
+# master
+set serialrx_provider = FPORT
+set blackbox_p_ratio = 64
+set dshot_idle_value = 170
+set motor_pwm_protocol = DSHOT600
+set ibata_scale = 138
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 1
+set tlm_halfduplex = OFF
+set osd_warn_batt_warning = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_cap_alarm = 1000
+set osd_vbat_pos = 2486
+set osd_rssi_pos = 2106
+set osd_tim_2_pos = 2518
+set osd_vtx_channel_pos = 2082
+set osd_current_pos = 2498
+set osd_mah_drawn_pos = 2465
+set osd_craft_name_pos = 2114
+set osd_warnings_pos = 2441
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_power = 3
+set vtx_freq = 5695
+set pinio_box = 40,41,42,43
+
+# profile
+profile 0
+
+set launch_control_mode = PITCHONLY
+set launch_trigger_throttle_percent = 40
+set launch_angle_limit = 60
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+set roll_rc_rate = 186
+set pitch_rc_rate = 186
+set yaw_rc_rate = 150
+set roll_expo = 65
+set pitch_expo = 65
+set yaw_expo = 60
+set roll_srate = 10
+set pitch_srate = 10
+set yaw_srate = 10
+
+# rateprofile
+rateprofile 1
+
+set roll_rc_rate = 130
+set pitch_rc_rate = 130
+set yaw_rc_rate = 130
+set roll_expo = 20
+set pitch_expo = 30
+set yaw_expo = 30
+set roll_srate = 80
+set pitch_srate = 80
+
+# rateprofile
+rateprofile 2
+
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
