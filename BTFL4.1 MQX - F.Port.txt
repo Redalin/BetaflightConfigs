@@ -1,23 +1,30 @@
-# 
+# MQX 1 Custom section 
+# name
+name REDALIN_1
 
-# diff all
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 27 1 1125 2100 0 0
+aux 2 13 2 1275 1675 0 0
+aux 3 35 2 1700 2100 0 0
+aux 4 40 1 900 1100 0 0
+aux 5 49 0 1800 1950 0 0
 
-# version
-# Betaflight / STM32F405 (S405) 4.1.0 Sep 25 2019 / 14:08:23 (08e8afa09) MSP API: 1.42
-# manufacturer_id: CLRA   board_name: CLRACINGF4   custom defaults: YES
+# MQX_2 custom switches
+name REDALIN_2
 
-# start the command batch
-batch start
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 27 1 900 1875 0 0
+aux 2 13 2 1275 1675 0 0
+aux 3 35 2 1700 2100 0 0
+aux 4 40 1 1900 2100 0 0
+aux 5 49 0 1775 1925 0 0
 
-# reset configuration to default settings
-defaults nosave
+##########
+# End different custom section
+##########
 
-board_name CLRACINGF4
-manufacturer_id CLRA
-mcu_id 003d0037354b500520353146
-signature 
-
-# name: REDALIN_1
 
 # resources
 resource SERIAL_RX 4 NONE
@@ -69,6 +76,10 @@ vtxtable powerlevels 5
 vtxtable powervalues 25 100 200 400 600
 vtxtable powerlabels 25 100 200 400 600
 
+
+# Optional - This might fix issues with launch mode
+#set runaway_takeoff_prevention = OFF
+
 # master
 set mag_hardware = NONE
 set baro_hardware = NONE
@@ -78,7 +89,6 @@ set dshot_idle_value = 170
 set ibata_scale = 138
 set yaw_motors_reversed = ON
 set small_angle = 180
-set runaway_takeoff_prevention = OFF
 set tlm_halfduplex = OFF
 set osd_warn_batt_warning = OFF
 set osd_warn_visual_beeper = OFF
@@ -105,11 +115,8 @@ set vtx_power = 1
 set vtx_freq = 5658
 set vcd_video_system = NTSC
 set pinio_box = 40,41,42,43
-set name = REDALIN_1
 
 profile 0
-
-# profile 0
 set p_pitch = 38
 set i_pitch = 108
 set d_pitch = 32
@@ -127,16 +134,8 @@ set launch_control_mode = PITCHONLY
 set launch_trigger_throttle_percent = 40
 set launch_angle_limit = 60
 
-profile 1
-
-profile 2
-
-# restore original profile selection
-profile 0
-
 rateprofile 0
 
-# rateprofile 0
 set roll_rc_rate = 186
 set pitch_rc_rate = 186
 set yaw_rc_rate = 150
@@ -146,19 +145,6 @@ set yaw_expo = 60
 set roll_srate = 10
 set pitch_srate = 10
 set yaw_srate = 10
-
-rateprofile 1
-
-rateprofile 2
-
-rateprofile 3
-
-rateprofile 4
-
-rateprofile 5
-
-# restore original rateprofile selection
-rateprofile 0
 
 # save configuration
 save
