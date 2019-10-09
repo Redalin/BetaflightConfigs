@@ -1,8 +1,13 @@
 AETR1234
 
-AUX1 Arm. Launch Mode (with SH on SF - Left shoulder switch)
-AUX2. Quad select/failsafe/launch mode/GPS Rescue = SA
-AUX3. Buzzer, turtle. = SB
+AUX1 Arm. Launch mode. Setup as logical switches 
+AUX2. Quad select/failsafe/VTx on/off = SwA (leftmost switch)
+AUX3. Buzzer, turtle. = SwD (far right switch)
 AUX4. LED Colour. = S2 (slider 2 - the right hand knob)
 
+Logical Switch for AUX1
+ARM - Throttle 0, SwH on, SwF (momentary) on for 0.3 sec.
+launch mode - when SwC down, drop aux1 to 80% 
 
+Logical Switch for AUX2
+When armed, hold position of AUX2 to prevent accidental VTx disabling (and cos switch is faulty)
