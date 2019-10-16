@@ -1,0 +1,149 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / AIKONF7 (AKF7) 4.0.5 Sep 10 2019 / 11:43:46 (3a0089487) MSP API: 1.41
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name AIKONF7
+manufacturer_id AIKO
+mcu_id 002d00213238510f36353235
+signature 
+
+# name
+name RedalinHL
+
+# resources
+
+# timer
+
+# dma
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature GPS
+feature TELEMETRY
+
+# beeper
+
+# beacon
+beacon RX_SET
+
+# map
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 1 2 115200 57600 0 115200
+serial 2 8192 115200 57600 0 115200
+serial 4 64 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 2 1300 1700 0 0
+aux 2 35 2 1700 2100 0 0
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# display_name
+
+# master
+set acc_calibration = 38,8,155
+set baro_hardware = NONE
+set rssi_channel = 8
+set serialrx_provider = CRSF
+set motor_pwm_protocol = DSHOT1200
+set bat_capacity = 1300
+set vbat_max_cell_voltage = 440
+set vbat_warning_cell_voltage = 340
+set current_meter = ESC
+set small_angle = 180
+set gps_provider = UBLOX
+set pid_process_denom = 1
+set osd_vbat_pos = 6519
+set osd_rssi_pos = 6202
+set osd_tim_1_pos = 6551
+set osd_current_pos = 2401
+set osd_mah_drawn_pos = 2435
+set osd_craft_name_pos = 4129
+set osd_gps_speed_pos = 2201
+set osd_gps_sats_pos = 2233
+set osd_home_dir_pos = 2172
+set osd_home_dist_pos = 2137
+set osd_warnings_pos = 14697
+set osd_stat_max_dist = ON
+set osd_stat_max_g_force = ON
+set osd_stat_flight_dist = ON
+set osd_profile = 2
+set vtx_band = 5
+set vtx_freq = 5658
+set vcd_video_system = NTSC
+
+# profile
+profile 0
+
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
