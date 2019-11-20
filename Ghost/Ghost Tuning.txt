@@ -1,0 +1,15 @@
+#Typically set ff_boost = 15, the default, is about right for most quads. Larger values may be used on low-authority quads or quads with motors that are slow to spool up. More than 40 would be unusual.
+set ff_boost = 15
+
+#If you know your Rx signal is stable with few dropped packets, the averaging delay can be avoided by disabling it with:
+set ff_interpolate_sp = ON
+
+#When using with TBS Crossfire or Frsky R9 on OpenTx radios these settings will dampen aliasing artifacts that currently happen with those systems (and probably any external module on OpenTx radios).
+set rc_smoothing_derivative_hz = 20
+set rc_smoothing_derivative_type = PT1
+
+#When the rpm filter is in use, the dynamic notch can be a single, narrower, notch, rather than the usual wider, dual notches that are needed when the rpm filter isn't active. The following snippet makes those changes, and cuts delay arising from the dynamic notch to about 1.4 of normal. It should be applied when using the rpm filter:
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
+
+# A 6S racing quad typically needs the default amounts of I and FF, the only slider change needed is usually to drop the P and D gain slider back to 0.7.
