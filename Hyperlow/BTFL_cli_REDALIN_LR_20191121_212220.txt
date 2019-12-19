@@ -1,30 +1,23 @@
-# MQX 1 Custom section 
-# name
-set name = REDALIN_1
+# 
 
-# aux
-aux 0 0 0 1700 2100 0 0
-aux 1 27 1 1125 2100 0 0
-aux 2 13 2 1275 1675 0 0
-aux 3 35 2 1700 2100 0 0
-aux 4 40 1 900 1100 0 0
-aux 5 49 0 1800 1950 0 0
+# diff all
 
-# MQX_2 custom switches
-set name = REDALIN_2
+# version
+# Betaflight / STM32F405 (S405) 4.1.0 Oct 16 2019 / 11:57:16 (c37a7c91a) MSP API: 1.42
+# manufacturer_id: CLRA   board_name: CLRACINGF4   custom defaults: YES
 
-# aux
-aux 0 0 0 1700 2100 0 0
-aux 1 27 1 900 1875 0 0
-aux 2 13 2 1275 1675 0 0
-aux 3 35 2 1700 2100 0 0
-aux 4 40 1 1900 2100 0 0
-aux 5 49 0 1775 1925 0 0
+# start the command batch
+batch start
 
-##########
-# End different custom section
-##########
+# reset configuration to default settings
+defaults nosave
 
+board_name CLRACINGF4
+manufacturer_id CLRA
+mcu_id 002b0038354b500520353146
+signature 
+
+# name: REDALIN_LR
 
 # resources
 resource SERIAL_RX 4 NONE
@@ -33,20 +26,22 @@ resource PINIO 1 A01
 # feature
 feature -RX_PARALLEL_PWM
 feature RX_SERIAL
+feature GPS
 feature TELEMETRY
-feature LED_STRIP
 
 # beeper
-beeper -RX_LOST
-beeper -RX_LOST_LANDING
 beeper -BAT_LOW
 beeper -DISARM_REPEAT
 beeper -ON_USB
 beeper -CRASH_FLIP
 
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
 # serial
-serial 2 64 115200 57600 0 115200
-serial 3 8192 115200 57600 0 115200
+serial 3 2 115200 57600 0 115200
+serial 5 64 115200 57600 0 115200
 
 # led
 led 0 5,10::AT:9
@@ -58,11 +53,9 @@ mode_color 7 0 7
 
 # aux
 aux 0 0 0 1700 2100 0 0
-aux 1 27 1 1125 2100 0 0
-aux 2 13 2 1275 1675 0 0
-aux 3 35 2 1700 2100 0 0
-aux 4 40 1 900 1100 0 0
-aux 5 49 0 1800 1950 0 0
+aux 1 13 2 1275 1675 0 0
+aux 2 35 2 1700 2100 0 0
+aux 3 49 0 1800 1950 0 0
 
 # vtxtable
 vtxtable bands 5
@@ -76,19 +69,16 @@ vtxtable powerlevels 5
 vtxtable powervalues 25 100 200 400 600
 vtxtable powerlabels 25 100 200 400 600
 
-
-# Optional - This might fix issues with launch mode
-#set runaway_takeoff_prevention = OFF
-
 # master
 set mag_hardware = NONE
 set baro_hardware = NONE
-set serialrx_provider = FPORT
+set serialrx_provider = CRSF
 set blackbox_p_ratio = 64
 set dshot_idle_value = 400
 set ibata_scale = 138
 set yaw_motors_reversed = ON
 set small_angle = 180
+set gps_auto_baud = ON
 set tlm_halfduplex = OFF
 set osd_warn_batt_warning = OFF
 set osd_warn_visual_beeper = OFF
@@ -104,38 +94,52 @@ set osd_vtx_channel_pos = 4130
 set osd_current_pos = 4480
 set osd_mah_drawn_pos = 4449
 set osd_craft_name_pos = 2082
+set osd_gps_sats_pos = 2282
+set osd_home_dir_pos = 2282
+set osd_home_dist_pos = 2282
 set osd_warnings_pos = 2378
 set osd_stat_max_spd = OFF
 set osd_stat_battery = ON
 set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set vtx_band = 5
-set vtx_channel = 1
-set vtx_power = 1
-set vtx_freq = 5658
+set vtx_channel = 8
+set vtx_power = 3
+set vtx_freq = 5917
 set vcd_video_system = NTSC
 set pinio_box = 40,41,42,43
+set name = REDALIN_LR
 
 profile 0
-set p_pitch = 38
-set i_pitch = 108
-set d_pitch = 32
-set f_pitch = 137
-set p_roll = 36
-set i_roll = 102
-set d_roll = 30
-set f_roll = 130
-set p_yaw = 25
-set i_yaw = 108
-set f_yaw = 115
-set d_min_roll = 17
-set d_min_pitch = 18
+
+# profile 0
+set p_pitch = 59
+set i_pitch = 117
+set d_pitch = 44
+set f_pitch = 148
+set p_roll = 55
+set i_roll = 111
+set d_roll = 42
+set f_roll = 140
+set p_yaw = 35
+set i_yaw = 117
+set f_yaw = 125
+set d_min_roll = 23
+set d_min_pitch = 26
 set launch_control_mode = PITCHONLY
 set launch_trigger_throttle_percent = 40
 set launch_angle_limit = 60
 
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
 rateprofile 0
 
+# rateprofile 0
 set roll_rc_rate = 186
 set pitch_rc_rate = 186
 set yaw_rc_rate = 150
@@ -145,6 +149,19 @@ set yaw_expo = 60
 set roll_srate = 10
 set pitch_srate = 10
 set yaw_srate = 10
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
 
 # save configuration
 save
