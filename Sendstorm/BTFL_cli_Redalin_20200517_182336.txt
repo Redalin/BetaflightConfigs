@@ -1,0 +1,143 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.2.0 May 13 2020 / 14:26:41 (6aeac3caa) MSP API: 1.43
+# config: manufacturer_id: PYDR, board_name: PYRODRONEF4, version: 1cfb2857, date: 2019-12-29T04:37:59Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name PYRODRONEF4
+manufacturer_id PYDR
+mcu_id 00270049374d500b20373947
+signature 
+
+# name: Redalin
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature TELEMETRY
+
+# beeper
+beeper -RX_LOST
+beeper -ARMING_GPS_FIX
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -ON_USB
+beeper -CRASH_FLIP
+
+# beacon
+beacon RX_SET
+
+# serial
+serial 5 64 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 2 1700 2100 0 0
+aux 2 35 2 1300 1700 0 0
+aux 3 39 1 1700 2100 0 0
+aux 4 48 0 1700 2100 0 0
+aux 5 49 0 1725 1950 0 0
+
+# master
+set gyro_lowpass2_hz = 300
+set dyn_lpf_gyro_min_hz = 240
+set dyn_lpf_gyro_max_hz = 600
+set acc_calibration = -126,-55,259,1
+set rc_smoothing_auto_smoothness = 7
+set serialrx_provider = CRSF
+set dshot_idle_value = 500
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set align_board_roll = 180
+set vbat_max_cell_voltage = 440
+set ibata_scale = 400
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 2
+set osd_warn_batt_warning = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_cap_alarm = 1000
+set osd_vbat_pos = 2103
+set osd_rssi_pos = 58
+set osd_tim_2_pos = 2454
+set osd_throttle_pos = 2096
+set osd_vtx_channel_pos = 34
+set osd_current_pos = 354
+set osd_mah_drawn_pos = 386
+set osd_craft_name_pos = 2082
+set osd_gps_speed_pos = 51
+set osd_warnings_pos = 2409
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set vcd_video_system = NTSC
+set pinio_box = 39,0,0,0
+set gyro_rpm_notch_q = 700
+set name = Redalin
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 84
+set dyn_lpf_dterm_max_hz = 204
+set dyn_lpf_dterm_curve_expo = 7
+set dterm_lowpass2_hz = 180
+set iterm_relax_cutoff = 20
+set yaw_lowpass_hz = 100
+set throttle_boost = 7
+set throttle_boost_cutoff = 25
+set launch_control_mode = PITCHONLY
+set launch_trigger_throttle_percent = 50
+set launch_angle_limit = 65
+set ff_spike_limit = 70
+set ff_smooth_factor = 20
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 186
+set pitch_rc_rate = 186
+set yaw_rc_rate = 150
+set roll_expo = 65
+set pitch_expo = 65
+set yaw_expo = 60
+set roll_srate = 15
+set pitch_srate = 15
+set yaw_srate = 15
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
