@@ -1,0 +1,215 @@
+# 
+
+# get version
+rx_spi_led_inversion = ON
+Allowed values: OFF, ON
+
+motor_pwm_inversion = OFF
+Allowed values: OFF, ON
+
+beeper_inversion = ON
+Allowed values: OFF, ON
+
+led_inversion = 0
+Allowed range: 0 - 7
+
+rcdevice_protocol_version = 0
+Allowed range: 0 - 1
+
+# version
+# Betaflight / STM32F411 (S411) 4.2.0 Apr 29 2020 / 08:09:11 (b480103d4) MSP API: 1.43
+# config: manufacturer_id: MTKS, board_name: MATEKF411RX, version: ee671311, date: 2019-10-16T11:49:37Z
+# board: manufacturer_id: MTKS, board_name: MATEKF411RX
+
+# diff all
+
+# version
+# Betaflight / STM32F411 (S411) 4.2.0 Apr 29 2020 / 08:09:11 (b480103d4) MSP API: 1.43
+# config: manufacturer_id: MTKS, board_name: MATEKF411RX, version: ee671311, date: 2019-10-16T11:49:37Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKF411RX
+manufacturer_id MTKS
+mcu_id 005c001c3139511938313739
+signature 
+
+# name: Redalin
+
+# feature
+feature -RX_SPI
+feature RX_SERIAL
+feature TELEMETRY
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -RX_LOST
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_CRIT_LOW
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -RX_SET
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -BLACKBOX_ERASE
+beeper -CRASH_FLIP
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# beacon
+beacon RX_SET
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 1 2048 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 2 1 1700 2100 0 0
+aux 2 13 2 1700 2100 0 0
+aux 3 35 3 1700 2100 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 3
+vtxtable powervalues 0 1 2
+vtxtable powerlabels 25 100 200
+
+# master
+set acc_calibration = -81,-9,108,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set rc_smoothing_auto_smoothness = 7
+set serialrx_provider = CRSF
+set dshot_idle_value = 420
+set motor_pwm_protocol = DSHOT600
+set motor_poles = 12
+set vbat_max_cell_voltage = 440
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 330
+set current_meter = NONE
+set small_angle = 180
+set osd_warn_batt_not_full = OFF
+set osd_warn_visual_beeper = OFF
+set osd_warn_core_temp = OFF
+set osd_warn_rc_smoothing = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_warn_rssi = ON
+set osd_cap_alarm = 450
+set osd_vbat_pos = 364
+set osd_rssi_pos = 90
+set osd_link_quality_pos = 2105
+set osd_tim_2_pos = 2423
+set osd_flymode_pos = 2081
+set osd_throttle_pos = 2370
+set osd_vtx_channel_pos = 353
+set osd_craft_name_pos = 2089
+set osd_display_name_pos = 394
+set osd_pid_roll_pos = 353
+set osd_pid_pitch_pos = 34
+set osd_pidrate_profile_pos = 186
+set osd_warnings_pos = 2345
+set osd_avg_cell_voltage_pos = 2402
+set osd_flip_arrow_pos = 310
+set osd_rate_profile_name_pos = 23
+set osd_pid_profile_name_pos = 2
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_max_curr = OFF
+set osd_stat_used_mah = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_total_time = ON
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_power = 2
+set vtx_freq = 5695
+set vcd_video_system = NTSC
+set gyro_1_align_yaw = 1800
+set name = Redalin
+
+profile 0
+
+# profile 0
+set auto_profile_cell_count = 2
+set ff_spike_limit = 70
+set ff_smooth_factor = 20
+set level_race_mode = ON
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_expo = 50
+set roll_rc_rate = 80
+set pitch_rc_rate = 80
+set yaw_rc_rate = 80
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 20
+set roll_srate = 60
+set pitch_srate = 60
+set yaw_srate = 60
+set tpa_rate = 25
+set tpa_breakpoint = 1650
+
+rateprofile 1
+
+# rateprofile 1
+set thr_mid = 20
+set thr_expo = 50
+set rates_type = QUICK
+set roll_rc_rate = 70
+set pitch_rc_rate = 70
+set yaw_rc_rate = 60
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 50
+set roll_srate = 46
+set pitch_srate = 46
+set yaw_srate = 42
+set tpa_rate = 45
+set tpa_breakpoint = 1450
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 1
+
+# save configuration
+save
+# 

@@ -1,0 +1,166 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.2.1 Jul 19 2020 / 06:18:01 (caa0d683c) MSP API: 1.43
+# config: manufacturer_id: CLRA, board_name: CLRACINGF4, version: b3487114, date: 2019-10-19T00:26:29Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CLRACINGF4
+manufacturer_id CLRA
+mcu_id 003d0037354b500520353146
+signature 
+
+# name: REDALIN
+
+# resources
+resource SERIAL_RX 4 NONE
+resource PINIO 1 A01
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature TELEMETRY
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -RX_LOST
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -RX_SET
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -BLACKBOX_ERASE
+beeper -CRASH_FLIP
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# beacon
+beacon RX_SET
+
+# serial
+serial 3 8192 115200 57600 0 115200
+serial 5 64 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 2 1700 2100 0 0
+aux 2 35 2 1325 1725 0 0
+aux 3 40 1 900 1750 0 0
+aux 4 48 0 1750 2100 0 0
+aux 5 49 0 1800 1950 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 5
+vtxtable powervalues 25 100 200 400 600
+vtxtable powerlabels 25 100 200 400 600
+
+# master
+set acc_calibration = 8,-61,81,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set serialrx_provider = CRSF
+set dshot_idle_value = 420
+set ibata_scale = 138
+set yaw_motors_reversed = ON
+set small_angle = 180
+set tlm_halfduplex = OFF
+set osd_warn_batt_warning = OFF
+set osd_warn_visual_beeper = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_cap_alarm = 1000
+set osd_vbat_pos = 406
+set osd_rssi_pos = 57
+set osd_link_quality_pos = 2106
+set osd_tim_2_pos = 2454
+set osd_throttle_pos = 2401
+set osd_vtx_channel_pos = 4130
+set osd_current_pos = 4480
+set osd_mah_drawn_pos = 4449
+set osd_craft_name_pos = 2082
+set osd_warnings_pos = 2378
+set osd_avg_cell_voltage_pos = 2433
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_min_link_quality = ON
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_power = 1
+set vtx_freq = 5695
+set vcd_video_system = NTSC
+set pinio_box = 40,41,42,43
+set name = REDALIN
+
+profile 0
+
+# profile 0
+set launch_control_mode = PITCHONLY
+set launch_trigger_throttle_percent = 50
+set launch_angle_limit = 60
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = ACTUAL
+set roll_rc_rate = 16
+set pitch_rc_rate = 16
+set yaw_rc_rate = 14
+set roll_expo = 80
+set pitch_expo = 80
+set yaw_expo = 70
+set roll_srate = 46
+set pitch_srate = 46
+set yaw_srate = 41
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
