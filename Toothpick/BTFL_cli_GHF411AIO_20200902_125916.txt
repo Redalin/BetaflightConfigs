@@ -1,0 +1,60 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / MATEKF411 (MK41) 4.1.1 Nov 15 2019 / 12:34:58 (1e5e3d369) MSP API: 1.42
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKF411
+mcu_id 003200333439511336383737
+signature 
+
+# name: GHF411AIO
+
+# feature
+feature -SOFTSERIAL
+feature -TELEMETRY
+feature MOTOR_STOP
+feature LED_STRIP
+
+# led
+led 0 7,8::CB:6
+
+# master
+set baro_hardware = NONE
+set motor_pwm_protocol = DSHOT600
+set name = GHF411AIO
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
