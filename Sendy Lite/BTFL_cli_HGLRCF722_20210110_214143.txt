@@ -1,0 +1,87 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.2.0 Jun 14 2020 / 03:05:26 (8f2d21460) MSP API: 1.43
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name HGLRCF722
+manufacturer_id HGLR
+mcu_id 003800413237510a31313935
+signature 
+
+# name: HGLRCF722
+
+# feature
+feature -RX_PARALLEL_PWM
+feature -AIRMODE
+feature RX_SERIAL
+feature OSD
+
+# serial
+serial 2 8192 115200 57600 0 115200
+serial 5 1024 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1300 2100 0 0
+aux 1 28 0 1700 2100 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 4 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 5 IMD6     I CUSTOM  5362 5399 5436 5473 5510 5547 5584 5621
+vtxtable powerlevels 5
+vtxtable powervalues 25 100 200 400 600
+vtxtable powerlabels 25 100 200 400 600
+
+# master
+set acc_calibration = -1,-23,-84,1
+set mag_hardware = NONE
+set serialrx_provider = SBUS
+set min_throttle = 1070
+set use_unsynced_pwm = OFF
+set motor_pwm_rate = 480
+set osd_vbat_pos = 2102
+set osd_tim_1_pos = 2518
+set osd_craft_name_pos = 2082
+set name = HGLRCF722
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
