@@ -1,0 +1,164 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.2.6 Jan  5 2021 / 19:08:42 (a4b6db1e7) MSP API: 1.43
+# config: manufacturer_id: HGLR, board_name: HGLRCF722, version: d1c47a55, date: 2020-04-18T09:09:56Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name HGLRCF722
+manufacturer_id HGLR
+mcu_id 003800413237510a31313935
+signature 
+
+# name: Redalin
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature MOTOR_STOP
+feature OSD
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -RX_LOST
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_CRIT_LOW
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -BLACKBOX_ERASE
+beeper -CRASH_FLIP
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# beacon
+beacon RX_SET
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 2 1700 2100 0 0
+aux 2 35 2 1300 1700 0 0
+aux 3 49 0 1825 1925 0 0
+
+# master
+set acc_calibration = 21,179,17,1
+set rc_smoothing_auto_smoothness = 5
+set serialrx_provider = CRSF
+set min_throttle = 1070
+set dshot_bidir = ON
+set use_unsynced_pwm = OFF
+set motor_pwm_protocol = DSHOT300
+set motor_pwm_rate = 480
+set vbat_max_cell_voltage = 440
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 330
+set ibata_scale = 400
+set beeper_dshot_beacon_tone = 2
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 2
+set osd_warn_batt_warning = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_rc_smoothing = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_tim_2_pos = 2423
+set osd_throttle_pos = 2095
+set osd_craft_name_pos = 2081
+set osd_avg_cell_voltage_pos = 2103
+set osd_warnings_pos = 14697
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set vcd_video_system = NTSC
+set gyro_rpm_notch_q = 600
+set name = Redalin
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_curve_expo = 7
+set iterm_relax_cutoff = 30
+set yaw_lowpass_hz = 100
+set throttle_boost = 7
+set throttle_boost_cutoff = 25
+set d_pitch = 30
+set f_pitch = 143
+set d_roll = 28
+set f_roll = 135
+set f_yaw = 135
+set d_min_roll = 18
+set d_min_pitch = 20
+set launch_control_mode = PITCHONLY
+set launch_trigger_throttle_percent = 50
+set launch_angle_limit = 60
+set ff_interpolate_sp = ON
+set ff_smooth_factor = 0
+set ff_boost = 20
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 186
+set pitch_rc_rate = 186
+set yaw_rc_rate = 159
+set roll_expo = 65
+set pitch_expo = 65
+set yaw_expo = 61
+set roll_srate = 4
+set pitch_srate = 4
+set yaw_srate = 2
+
+rateprofile 1
+
+# rateprofile 1
+set roll_rc_rate = 185
+set pitch_rc_rate = 185
+set yaw_rc_rate = 170
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 50
+set roll_srate = 26
+set pitch_srate = 26
+set yaw_srate = 20
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 1
+
+# save configuration
+save
+# 
