@@ -16,6 +16,7 @@ defaults nosave
 board_name HGLRCF722
 manufacturer_id HGLR
 mcu_id 003800413237510a31313935
+mcu_id 003800443237510a31313935
 signature 
 
 # name: HGLRCF722
