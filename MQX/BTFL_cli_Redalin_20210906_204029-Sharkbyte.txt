@@ -1,0 +1,148 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.3.0 Jun 27 2021 / 23:28:27 (3d5a0e585) MSP API: 1.44
+# config: manufacturer_id: CLRA, board_name: CLRACINGF4, version: 14929e39, date: 2020-08-31T10:05:16Z
+
+# start the command batch
+#batch start
+
+# reset configuration to default settings
+#defaults nosave
+
+#board_name CLRACINGF4
+#manufacturer_id CLRA
+#mcu_id 003d0037354b500520353146
+#signature 
+
+# name: Redalin
+
+# resources
+#resource SERIAL_RX 4 NONE
+#resource PINIO 1 A01
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature TELEMETRY
+
+# serial
+serial 3 1 115200 57600 0 115200
+serial 5 64 115200 57600 0 115200
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -RX_LOST
+beeper -RX_LOST_LANDING
+beeper -DISARMING
+beeper -ARMING
+beeper -ARMING_GPS_FIX
+beeper -BAT_LOW
+beeper -GPS_STATUS
+beeper -RX_SET
+beeper -ACC_CALIBRATION
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -BLACKBOX_ERASE
+beeper -CRASH_FLIP
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSE
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# beacon
+beacon RX_SET
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 2 1700 2100 0 0
+aux 2 35 2 1325 1725 0 0
+aux 3 49 3 1500 2100 0 0
+
+# master
+set mag_hardware = NONE
+set baro_hardware = NONE
+set serialrx_provider = CRSF
+set dshot_idle_value = 420
+set ibata_scale = 138
+set yaw_motors_reversed = ON
+set small_angle = 180
+set simplified_gyro_filter = ON
+set tlm_halfduplex = OFF
+set osd_warn_batt_warning = OFF
+set osd_warn_visual_beeper = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_warn_rc_smoothing = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_cap_alarm = 1000
+set osd_vbat_pos = 406
+set osd_rssi_pos = 2465
+set osd_link_quality_pos = 2497
+set osd_rssi_dbm_pos = 417
+set osd_tim_2_pos = 2519
+set osd_throttle_pos = 2061
+set osd_vtx_channel_pos = 4130
+set osd_current_pos = 4480
+set osd_mah_drawn_pos = 4449
+set osd_craft_name_pos = 2049
+set osd_warnings_pos = 14762
+set osd_avg_cell_voltage_pos = 2072
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_min_link_quality = ON
+set osd_displayport_device = MSP
+set displayport_msp_serial = 3
+set gyro_rpm_notch_q = 600
+set name = Redalin
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_curve_expo = 7
+set vbat_sag_compensation = 100
+set iterm_relax_cutoff = 30
+set yaw_lowpass_hz = 100
+set throttle_boost = 7
+set throttle_boost_cutoff = 25
+set motor_output_limit = 53
+set auto_profile_cell_count = 6
+set launch_control_mode = PITCHONLY
+set launch_trigger_throttle_percent = 50
+set launch_angle_limit = 60
+set simplified_pids_mode = RPY
+set simplified_dterm_filter = ON
+
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 185
+set pitch_rc_rate = 185
+set yaw_rc_rate = 170
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 50
+set roll_srate = 26
+set pitch_srate = 26
+set yaw_srate = 20
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
