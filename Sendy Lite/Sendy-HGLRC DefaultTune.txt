@@ -77,6 +77,10 @@ set throttle_boost_cutoff = 25
 set dyn_lpf_dterm_curve_expo = 7
 set gyro_rpm_notch_q = 600
 
+# Sharkbyte stuff
+set osd_displayport_device = MSP
+set displayport_msp_serial = 0
+
 profile 0
 
 # profile 0
