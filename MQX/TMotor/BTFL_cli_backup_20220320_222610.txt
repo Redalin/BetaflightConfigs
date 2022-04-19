@@ -1,0 +1,42 @@
+defaults nosave
+
+
+# version
+# Betaflight / TMOTORF7 (TMR7) 4.1.1 Nov 15 2019 / 12:58:18 (1e5e3d369) MSP API: 1.42
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name TMOTORF7
+manufacturer_id TMTR
+mcu_id 001900165931500a20383539
+signature 
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration

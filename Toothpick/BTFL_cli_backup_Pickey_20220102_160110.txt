@@ -1,0 +1,131 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F411 (S411) 4.2.5 Nov 22 2020 / 18:38:45 (afdac08b3) MSP API: 1.43
+# config: manufacturer_id: MTKS, board_name: MATEKF411, version: be0c9205, date: 2020-01-15T19:44:32Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKF411
+manufacturer_id MTKS
+mcu_id 003200333439511336383737
+signature 
+
+# name: Pickey
+
+# feature
+feature -SOFTSERIAL
+feature -TELEMETRY
+
+# beacon
+beacon RX_SET
+
+# serial
+serial 0 1 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 2 1 1700 2100 0 0
+aux 2 13 2 1700 2100 0 0
+aux 3 35 2 1300 1700 0 0
+aux 4 48 0 1700 2100 0 0
+
+# vtxtable
+vtxtable bands 2
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable powerlevels 3
+vtxtable powervalues 0 1 2
+vtxtable powerlabels 25 200 500
+
+# master
+set acc_calibration = -168,24,-284,1
+set serialrx_provider = CRSF
+set yaw_motors_reversed = ON
+set small_angle = 180
+set osd_warn_batt_warning = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_warn_rc_smoothing = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_warn_link_quality = ON
+set osd_cap_alarm = 1000
+set osd_vbat_pos = 2072
+set osd_rssi_pos = 58
+set osd_tim_1_pos = 439
+set osd_tim_2_pos = 2552
+set osd_throttle_pos = 2062
+set osd_vtx_channel_pos = 34
+set osd_current_pos = 354
+set osd_mah_drawn_pos = 386
+set osd_craft_name_pos = 2048
+set osd_gps_speed_pos = 51
+set osd_warnings_pos = 2536
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_displayport_device = MSP
+set vtx_band = 1
+set vtx_channel = 2
+set vtx_power = 1
+set vcd_video_system = PAL
+set gyro_1_align_yaw = 1800
+set name = Pickey
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 2
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 186
+set pitch_rc_rate = 186
+set yaw_rc_rate = 150
+set roll_expo = 65
+set pitch_expo = 65
+set yaw_expo = 60
+set roll_srate = 15
+set pitch_srate = 15
+set yaw_srate = 15
+
+rateprofile 1
+
+# rateprofile 1
+set roll_rc_rate = 185
+set pitch_rc_rate = 185
+set yaw_rc_rate = 170
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 50
+set roll_srate = 26
+set pitch_srate = 26
+set yaw_srate = 20
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 1
+
+# save configuration
