@@ -1,0 +1,46 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.3.1 Jul 13 2022 / 03:36:10 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: FOXE, board_name: FOXEERF722V4, version: 0c0e7f4d, date: 2022-08-06T03:47:21Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name FOXEERF722V4
+manufacturer_id FOXE
+mcu_id 0024000d4232500420343639
+signature 
+
+# master
+set gyro_1_align_yaw = 2700
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
