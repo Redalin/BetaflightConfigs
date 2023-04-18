@@ -6,7 +6,8 @@ CLI Dumps from my quads
 Tango2  
 AETR1234  
 
-AUX1 Arm. ExpressLRS expects this to be a binary switch  
-AUX2. Quad select/failsafe/VTx on/off = SwB (left rocker). Not used in Race quads   
-AUX3. 1500 Turtle Mode, 2000 Buzzer = SwC (right rocker)  
-AUX4. Launch Mode. = SwF (left momentary. Must hold when arming to engage launch)  
+AUX1. Arm. SwD. Right Shoulder
+AUX2. 1500 Turtle Mode, 2000 Buzzer = SwC (right rocker)  
+AUX3. VTx on/off = SwA (left shoulder)
+AUX4. Quad Select = SwB (Left Rocker)
+AUX5. Launch Mode. = SwF (left momentary. Must hold when arming to engage launch)  
