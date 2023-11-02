@@ -1,0 +1,83 @@
+# For individual Racing
+## Set all quads with this code:
+
+# vtx Aux 3 low is VTX on
+vtx 0 2 0 0 1 900 1500
+vtx 1 2 0 0 3 1500 2100
+
+save
+
+
+# For Team Racing
+
+Set this slightly different code on each 
+
+## Quad 1
+
+# vtx Aux 3 low is VTX off
+vtx 0 2 0 0 3 900 1300
+vtx 1 2 0 0 1 1300 2100
+
+# rxfail
+rxfail 6 s 1000
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 27 3 1300 2100 0 0
+aux 2 13 1 1700 2100 0 0
+aux 3 35 1 1300 1700 0 0
+aux 4 49 4 1700 2100 0 0
+aux 5 53 4 1700 2100 0 0
+
+save
+
+
+## Quad 2
+
+# vtx Aux 3 low is VTX off
+vtx 0 2 0 0 3 900 1300
+vtx 1 2 0 0 1 1300 2100
+
+# rxfail
+rxfail 6 s 1000
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 27 3 900 1300 0 0
+aux 2 27 3 1700 2100 0 0
+aux 3 13 1 1700 2100 0 0
+aux 4 35 1 1300 1700 0 0
+aux 5 49 4 1700 2100 0 0
+aux 6 53 4 1700 2100 0 0
+
+save
+
+
+## Quad 3
+
+# vtx Aux 3 low is VTX off
+vtx 0 2 0 0 3 900 1300
+vtx 1 2 0 0 1 1300 2100
+
+# rxfail
+rxfail 6 s 1000
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 27 3 900 1700 0 0
+aux 2 13 1 1700 2100 0 0
+aux 3 35 1 1300 1700 0 0
+aux 4 49 4 1700 2100 0 0
+aux 5 53 4 1700 2100 0 0
+
+save
+
+
+
+## For RPM Limits
+
+# Set rpm limit
+set rpm_limit = ON
+set rpm_limit_value = 20000
+
+save
