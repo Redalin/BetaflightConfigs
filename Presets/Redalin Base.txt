@@ -1,0 +1,29 @@
+#$ TITLE: Redalin HD OSD settings
+#$ FIRMWARE_VERSION: 4.4
+#$ CATEGORY: OSD
+#$ STATUS: OFFICIAL
+#$ KEYWORDS: OSD
+#$ AUTHOR: Redalin
+#$ DESCRIPTION: Applies Redalin's OSD Settings
+
+# enable HD OSD
+set osd_canvas_width = 53
+set osd_canvas_height = 20
+
+set craft_name = Killadrones
+set pilot_name = Redalin
+
+set osd_rssi_pos = 321
+set osd_link_quality_pos = 2569
+set osd_rssi_dbm_pos = 359
+set osd_tim_2_pos = 3587
+set osd_throttle_pos = 2071
+set osd_craft_name_pos = 2580
+set osd_pilot_name_pos = 2056
+set osd_warnings_pos = 14836
+set osd_avg_cell_voltage_pos = 3075
+set osd_flip_arrow_pos = 2520
+set osd_displayport_device = MSP
+set osd_canvas_width = 50
+set osd_canvas_height = 18
+set vcd_video_system = HD
