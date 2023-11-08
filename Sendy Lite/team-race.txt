@@ -5,6 +5,10 @@
 vtx 0 2 0 0 1 900 1500
 vtx 1 2 0 0 3 1500 2100
 
+# enable HD OSD
+set osd_canvas_width = 53
+set osd_canvas_height = 20
+
 save
 
 
