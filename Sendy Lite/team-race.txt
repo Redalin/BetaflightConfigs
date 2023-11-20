@@ -19,7 +19,7 @@ Set this slightly different code on each
 ## Quad 1
 
 # vtx Aux 3 low is VTX off
-vtx 0 2 0 0 3 900 1300
+vtx 0 2 0 0 5 900 1300
 vtx 1 2 0 0 1 1300 2100
 
 # rxfail
@@ -82,6 +82,7 @@ save
 
 # Set rpm limit
 set rpm_limit = ON
-set rpm_limit_value = 20000
+set rpm_limit_value = 37000
+set motor_kv = 1750
 
 save
