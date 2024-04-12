@@ -82,7 +82,7 @@ save
 
 # Set rpm limit
 set rpm_limit = ON
-set rpm_limit_value = 37000
-set motor_kv = 1750
+set rpm_limit_value = 20000
+set motor_kv = 2020
 
 save
