@@ -19,9 +19,12 @@ set osd_displayport_device = MSP
 set osd_canvas_width = 50
 set osd_canvas_height = 18
 
-# vtx off when AUX3 is ON
-vtx 0 2 0 0 1 900 1300
-vtx 1 2 0 0 3 1300 2100
+# vtx off when AUX3 is LOW (1000)
+vtx 0 2 0 0 3 900 1300
+vtx 1 2 0 0 1 1300 2100
+
+# rxfail set AUX3 1000 (vtx off)
+rxfail 6 s 1000
 
 set launch_control_mode = PITCHONLY
 set launch_trigger_allow_reset = ON
