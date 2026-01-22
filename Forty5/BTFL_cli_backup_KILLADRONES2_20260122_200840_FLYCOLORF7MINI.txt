@@ -1,0 +1,209 @@
+defaults nosave
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.5.2 Jul  6 2025 / 01:24:43 (024f8e13d) MSP API: 1.46
+# config rev: 85c98d6
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name FLYCOLORF7MINI
+manufacturer_id FLCO
+mcu_id 002b004e3033510f32323536
+signature 
+
+# name: Killadrones
+
+# feature
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+# serial
+serial 1 131073 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 13 1 1700 2100 0 0
+aux 2 35 1 1300 1700 0 0
+aux 3 49 4 1700 2100 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E CUSTOM  5705    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# vtx
+vtx 0 2 0 0 3 900 1300
+vtx 1 2 0 0 1 1300 2100
+
+# rxfail
+rxfail 6 s 1000
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 1000
+set dyn_notch_count = 2
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 125
+set dyn_notch_max_hz = 550
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set acc_calibration = 103,-8,-18,1
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
+set motor_kv = 2020
+set dshot_bidir = ON
+set vbat_max_cell_voltage = 440
+set vbat_warning_cell_voltage = 330
+set yaw_motors_reversed = ON
+set rpm_limit = ON
+set simplified_gyro_filter = OFF
+set report_cell_voltage = ON
+set osd_warn_bitmask = 270207
+set osd_vbat_pos = 106
+set osd_rssi_pos = 321
+set osd_link_quality_pos = 552
+set osd_rssi_dbm_pos = 359
+set osd_tim_2_pos = 3619
+set osd_throttle_pos = 2537
+set osd_current_pos = 74
+set osd_mah_drawn_pos = 41
+set osd_craft_name_pos = 2612
+set osd_pilot_name_pos = 2473
+set osd_warnings_pos = 14868
+set osd_avg_cell_voltage_pos = 2505
+set osd_ready_mode_pos = 54
+set osd_flip_arrow_pos = 2552
+set osd_pid_profile_name_pos = 2601
+set osd_canvas_width = 50
+set osd_canvas_height = 18
+set vtx_band = 5
+set vtx_channel = 7
+set vtx_power = 3
+set vtx_freq = 5880
+set displayport_msp_fonts = 0,0,0,0
+set rpm_filter_weights = 100,20,100
+set rpm_filter_fade_range_hz = 100
+set craft_name = Killadrones
+set pilot_name = Redalin
+
+profile 0
+
+# profile 0
+set profile_name = Karate
+set dterm_lpf1_dyn_expo = 7
+set iterm_relax_cutoff = 45
+set iterm_limit = 500
+set pidsum_limit_yaw = 1000
+set throttle_boost = 2
+set p_pitch = 41
+set i_pitch = 89
+set d_pitch = 40
+set f_pitch = 137
+set p_roll = 38
+set i_roll = 81
+set d_roll = 35
+set f_roll = 125
+set d_min_roll = 21
+set d_min_pitch = 23
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
+set feedforward_max_rate_limit = 100
+set dyn_idle_min_rpm = 40
+set dyn_idle_p_gain = 35
+set simplified_pids_mode = RP
+set simplified_i_gain = 120
+set simplified_d_gain = 70
+set simplified_pi_gain = 85
+set simplified_dmax_gain = 200
+set simplified_feedforward_gain = 105
+set simplified_pitch_pi_gain = 105
+set tpa_rate = 70
+set tpa_breakpoint = 1250
+set ez_landing_limit = 5
+
+profile 1
+
+# profile 1
+set profile_name = FORTY5
+set dterm_lpf1_dyn_expo = 7
+set crash_recovery_angle = 30
+set crash_recovery = ON
+set iterm_relax_cutoff = 45
+set iterm_limit = 500
+set pidsum_limit_yaw = 1000
+set throttle_boost = 2
+set p_pitch = 41
+set i_pitch = 89
+set d_pitch = 37
+set f_pitch = 137
+set p_roll = 38
+set i_roll = 81
+set d_roll = 32
+set f_roll = 125
+set d_min_roll = 19
+set d_min_pitch = 22
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 87
+set feedforward_jitter_factor = 2
+set feedforward_boost = 18
+set feedforward_max_rate_limit = 100
+set dyn_idle_min_rpm = 40
+set simplified_pids_mode = RP
+set simplified_i_gain = 120
+set simplified_d_gain = 65
+set simplified_pi_gain = 85
+set simplified_dmax_gain = 200
+set simplified_feedforward_gain = 105
+set simplified_pitch_pi_gain = 105
+set tpa_rate = 70
+set tpa_breakpoint = 1250
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 1
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 25
+set thr_expo = 50
+set roll_rc_rate = 17
+set pitch_rc_rate = 17
+set yaw_rc_rate = 17
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 48
+set pitch_srate = 45
+set yaw_srate = 42
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
